@@ -13,6 +13,6 @@ public class CalcPi {
             sign = sign * -1;       // הסימן מתהפך כל פעם
         }
         System.out.println("pi according to Java: " + Math.PI);
-        System.out.println("pi, approximated: " + (sum * 4));
+        System.out.println("pi, approximated:     " + (sum * 4));
     }
 }

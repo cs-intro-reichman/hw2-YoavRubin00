@@ -7,25 +7,26 @@ public class Collatz {
         // mode.equals("v") יחזיר true אם המשתמש הזין "v"
         boolean isVerbose = mode.equals("v");
         for (int seed = 1; seed <= N; seed++) {
-            int currentNum = seed; // המספר הנוכחי בסדרה מתחיל ב-seed
-            int steps = 1;         // סופרים את ה-seed כצעד הראשון
-            if (isVerbose) {
-                System.out.print(currentNum + " ");
-            }
-            while (currentNum != 1) {      
-                if (currentNum % 2 == 0) {
-                    currentNum = currentNum / 2;
-                } else {
-                    currentNum = (currentNum * 3) + 1;
-                }
-                if (isVerbose) {
-                    System.out.print(currentNum + " ");
-                }
-                steps++;
-            }
-            if (isVerbose) {
-                System.out.println("(" + steps + ")");
-            }
+        int currentNum = seed;
+        int steps = 1;
+        if (isVerbose) {
+            System.out.print(currentNum + " "); // הדפס את ה-seed
+}
+        while (currentNum != 1 || steps == 1) {
+        if (currentNum % 2 == 0) {
+        currentNum = currentNum / 2;
+        }   
+        else {
+        currentNum = (currentNum * 3) + 1;
+        }
+        steps++; // קדם צעדים
+        if (isVerbose) {
+        System.out.print(currentNum + " ");
+        }
+}
+        if (isVerbose) {
+        System.out.println("(" + steps + ")");
+}
         } 
         System.out.println("Every one of the first " + N + " hailstone sequences reached 1.");
     }
