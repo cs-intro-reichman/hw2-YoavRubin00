@@ -11,7 +11,7 @@ public class TimeCalc {
         int newmin;
         int newhour;
         int totalmin = min60 + hours24 * 60 + minadd;
-        newhour = totalmin / 60;
+        newhour = (totalmin / 60)%24;
         newmin = totalmin % 60 ;
         if (newhour > 23) {
             newhour = newhour - 24;
